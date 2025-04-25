@@ -1,3 +1,7 @@
+tutorial:
+https://www.youtube.com/watch?v=Its0eQ9A3XI
+
+
 How to run the script: 
 Start powershell as administrator
 Run "Set-ExecutionPolicy Unrestricted -Scope CurrentUser"
