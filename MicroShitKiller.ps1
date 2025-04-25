@@ -46,7 +46,7 @@ $bloatware = @(
 )
 
 foreach ($app in $bloatware) {
-    Get-AppxPackage -AllUsers $app | Remove-AppxPackage -AllUsers -Force
+    Get-AppxPackage -AllUsers $app | Remove-AppxPackage 
 }
 
 
