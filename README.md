@@ -4,7 +4,7 @@ Run "Set-ExecutionPolicy Unrestricted -Scope CurrentUser"
 Then navigate to where the script is using CD
 Example: "cd ~
 cd Downloads
-cd <folder with the script>"
+cd (folder with the script)"
 Now that you are in the folder, run ".\MicroShitKiller.ps"
 And then its self-explanitory
 
