@@ -5,6 +5,18 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     Exit
 }
 
+
+
+$EdgeRegPath = "HKLM:\SOFTWARE\Policies\Microsoft\EdgeUpdate"
+New-Item -Path $EdgeRegPath -Force
+New-ItemProperty -Path $EdgeRegPath -Name "DoNotUpdateToEdgeWithChromium" -Value 1 -PropertyType DWORD -Force
+
+
+$StoreRegPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Store"
+New-Item -Path $StoreRegPath -Force
+New-ItemProperty -Path $StoreRegPath -Name "AutoDownload" -Value 2 -PropertyType DWORD -Force
+
+
 Write-Host "!IF YOU GET ERRORS THEN RUN THE FOLLOWING COMMAND:"
 Write-Host "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 Write-Host "Also select all (a) in there"
