@@ -128,7 +128,6 @@ if ($confirmation -ne 'y') {
 Write-Host "Choose a theme to apply:" -ForegroundColor Cyan
 Write-Host "1. Windows 7"
 Write-Host "2. Windows 10"
-Write-Host "3. Linux (GNOME)"
 $themeChoice = Read-Host "Enter the number of your choice"
 
 switch ($themeChoice) {
