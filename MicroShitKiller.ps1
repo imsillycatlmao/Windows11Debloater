@@ -34,7 +34,7 @@ $bloatware = @(
 )
 
 foreach ($app in $bloatware) {
-    Get-AppxPackage -AllUsers $app | Remove-AppxPackage 
+    Get-AppxPackage -AllUsers $app | Remove-AppxPackage -AllUsers -Force
 }
 
 
@@ -77,6 +77,21 @@ switch ($browserChoice) {
     }
 }
 
+
+
+
+Write-Host "Force killing microshit edge"
+
+Remove-Item -Path "C:\Program Files (x86)\Microsoft\Edge" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "C:\Program Files\Microsoft\Edge" -Recurse -Force -ErrorAction SilentlyContinue
+
+
+Remove-Item -Path "HKCU:\Software\Microsoft\Edge" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "HKLM:\Software\Microsoft\Edge" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\EdgeUpdate" -Recurse -Force -ErrorAction SilentlyContinue
+
+
+Get-AppxPackage -AllUsers -Name "*MicrosoftEdge*" | Remove-AppxPackage -AllUsers
 
 
 Write-Host "debloated win11 successfully(maybe)"
