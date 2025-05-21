@@ -9,7 +9,7 @@ Then navigate to where the script is using CD
 Example: "cd ~
 cd Downloads
 cd (folder with the script)"
-Now that you are in the folder, run ".\MicroShitKiller.ps"
+Now that you are in the folder, run ".\MicroShitKiller.ps1"
 And then its self-explanitory
 
 
